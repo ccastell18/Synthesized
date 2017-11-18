@@ -55,14 +55,14 @@
   //WAVEFORM-BUILDER-START//
   function playSound(){
     osc = context.createOscillator();
-    osc.type;
+    osc.type= null;
     osc.frequency.value;
     osc.connect(filter);
     osc.start();
   }
   //Select Waveform//
   document.getElementById('waveform').addEventListener('click',function(){
-    osc.type=event.target.value;
+    osc.type = event.target.value;
   })
   //FREQUENCY-SLIDER//
   document.getElementById('hertz').addEventListener('input',function(){
@@ -99,12 +99,9 @@ function keyPlayc(){
   osc2.frequency.value =261.626;
   osc2.connect(vol2);
   osc2.start(context.currentTime);
-
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('c').addEventListener('click', keyPlayc);
+document.getElementById('c').addEventListener('mousedown', keyPlayc);
+document.getElementById('c').addEventListener('mouseup', stopNote);
 
 function keyPlayd(){
   osc2 = context.createOscillator();
@@ -112,11 +109,9 @@ function keyPlayd(){
   osc2.frequency.value =293.665;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('d').addEventListener('click', keyPlayd);
+document.getElementById('d').addEventListener('mousedown', keyPlayd);
+document.getElementById('d').addEventListener('mouseup', stopNote);
 
 function keyPlaye(){
   osc2 = context.createOscillator();
@@ -124,11 +119,9 @@ function keyPlaye(){
   osc2.frequency.value =329.628;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('e').addEventListener('click', keyPlaye);
+document.getElementById('e').addEventListener('mousedown', keyPlaye);
+document.getElementById('e').addEventListener('mouseup', stopNote);
 
 function keyPlayf(){
   osc2 = context.createOscillator();
@@ -136,11 +129,9 @@ function keyPlayf(){
   osc2.frequency.value =349.228;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('f').addEventListener('click', keyPlayf);
+document.getElementById('f').addEventListener('mousedown', keyPlayf);
+document.getElementById('f').addEventListener('mouseup', stopNote);
 
 function keyPlayg(){
   osc2 = context.createOscillator();
@@ -148,11 +139,9 @@ function keyPlayg(){
   osc2.frequency.value =391.995;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('g').addEventListener('click', keyPlayg);
+document.getElementById('g').addEventListener('mousedown', keyPlayg);
+document.getElementById('g').addEventListener('mouseup', stopNote);
 
 function keyPlaya(){
   osc2 = context.createOscillator();
@@ -160,11 +149,9 @@ function keyPlaya(){
   osc2.frequency.value =440;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('a').addEventListener('click', keyPlaya);
+document.getElementById('a').addEventListener('mousedown', keyPlaya);
+document.getElementById('a').addEventListener('mouseup', stopNote);
 
 function keyPlayb(){
   osc2 = context.createOscillator();
@@ -172,11 +159,9 @@ function keyPlayb(){
   osc2.frequency.value =493.883;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('b').addEventListener('click', keyPlayb);
+document.getElementById('b').addEventListener('mousedown', keyPlayb);
+document.getElementById('b').addEventListener('mouseup', stopNote);
 
 function keyPlayc3(){
   osc2 = context.createOscillator();
@@ -184,11 +169,9 @@ function keyPlayc3(){
   osc2.frequency.value =523.251;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('c3').addEventListener('click', keyPlayc3);
+document.getElementById('c3').addEventListener('mousedown', keyPlayc3);
+document.getElementById('c3').addEventListener('mouseup', stopNote);
 
 
 function keyPlayc2(){
@@ -197,13 +180,9 @@ function keyPlayc2(){
   osc2.frequency.value =277.183;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('c2').addEventListener('click', keyPlayc2);
-
-
+document.getElementById('c2').addEventListener('mousedown', keyPlayc2);
+document.getElementById('c2').addEventListener('mouseup', stopNote);
 
 function keyPlayd2(){
   osc2 = context.createOscillator();
@@ -211,11 +190,9 @@ function keyPlayd2(){
   osc2.frequency.value =311.127;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('d2').addEventListener('click', keyPlayd2);
+document.getElementById('d2').addEventListener('mousedown', keyPlayd2);
+document.getElementById('d2').addEventListener('mouseup', stopNote);
 
 function keyPlayf2(){
   osc2 = context.createOscillator();
@@ -223,12 +200,9 @@ function keyPlayf2(){
   osc2.frequency.value =369.994;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('f2').addEventListener('click', keyPlayf2);
-
+document.getElementById('f2').addEventListener('mousedown', keyPlayf2);
+document.getElementById('f2').addEventListener('mouseup', stopNote)
 
 function keyPlayg2(){
   osc2 = context.createOscillator();
@@ -236,11 +210,9 @@ function keyPlayg2(){
   osc2.frequency.value = 415.305;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('g2').addEventListener('click', keyPlayg2);
+document.getElementById('g2').addEventListener('mousedown', keyPlayg2);
+document.getElementById('g2').addEventListener('mouseup', stopNote);
 
 function keyPlaya2(){
   osc2 = context.createOscillator();
@@ -248,11 +220,9 @@ function keyPlaya2(){
   osc2.frequency.value =466.164;
   osc2.connect(vol2);
   osc2.start();
-  setTimeout(function(){
-    stopNote();
-  },1000);
 }
-document.getElementById('a2').addEventListener('click', keyPlaya2);
+document.getElementById('a2').addEventListener('mousedown', keyPlaya2);
+document.getElementById('a2').addEventListener('mouseup', stopNote);
 
 
 ///Ajax///
