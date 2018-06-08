@@ -1,5 +1,6 @@
 # Synthesized
 
+This is my very first project in my web immersive program.
 This project will be a synthesizer made out of HTML and Javascript.  I will also include a thermin.  It will all be based off of 
 the Web Audio API that is built into the browser.  
 The synthesizer will:
